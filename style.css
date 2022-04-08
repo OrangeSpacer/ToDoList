@@ -61,7 +61,7 @@ input::-webkit-input-placeholder {
 
 .tasks__active{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat( auto-fit, minmax(550px, 1fr));
     grid-template-rows: 1fr;
     grid-gap: 60px;
     align-items: baseline;
@@ -88,14 +88,12 @@ input::-webkit-input-placeholder {
 }
 
 .task{
-    display: flex;
-    flex-wrap: wrap;
+    overflow-wrap:break-word;
     position: relative;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    padding-top: 3%;
-    padding-left: 10%;
+    font-size: 25px;
+    padding: 3% 10% 3% 10%;
     line-height: 21px;
     color: #94ADCF;
     min-height: 59px;
@@ -112,7 +110,7 @@ input::-webkit-input-placeholder {
 
 .tasks__complete{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat( auto-fit, minmax(550px, 1fr));
     grid-template-rows: 1fr;
     grid-gap: 60px;
     align-items: baseline;
