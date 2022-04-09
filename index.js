@@ -32,14 +32,23 @@ function taskComplited() {
     })
 }
 
+function enterTask(){
+    if (content != undefined){
+        taskActive(content)
+        content = undefined
+    }
+}
+
 function newTask() {
     taskInput.addEventListener('input', (e) => {
         content = taskInput.value
     })
     taskAddBtn.addEventListener('click', () => {
-        if (content != undefined){
-            taskActive(content)
-            content = undefined
+        enterTask()
+    })
+    document.addEventListener('keydown', (e) => {
+        if (e.keyCode == 13){
+            enterTask()
         }
     })
     taskComplited()
