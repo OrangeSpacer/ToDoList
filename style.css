@@ -44,7 +44,6 @@ input::-webkit-input-placeholder {
     position: absolute;
     border: none;
     background-color: transparent;
-    left: 71.5%;
     top: 17%;
     cursor: pointer;
     transition: all 0.5s ease;
@@ -129,4 +128,35 @@ input::-webkit-input-placeholder {
     border-radius: 100%;
     background-color: #94ADCF;
     cursor: pointer;
+}
+
+
+@media (max-width: 1440px){
+    .tasks__active{
+        grid-template-columns: repeat( auto-fit, minmax(420px, 1fr));
+    }
+    .tasks__complete{
+        grid-template-columns: repeat( auto-fit, minmax(420px, 1fr));
+    }
+}
+
+@media (max-width: 1024px){
+    .tasks__active{
+        grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));
+    }
+    .tasks__complete{
+        grid-template-columns: repeat( auto-fit, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 768px){
+    .new__task{
+        width: 80%;
+    }
+    .tasks__active{
+        grid-template-columns: repeat( auto-fit, minmax(220px, 1fr));
+    }
+    .tasks__complete{
+        grid-template-columns: repeat( auto-fit, minmax(220px, 1fr));
+    }
 }
